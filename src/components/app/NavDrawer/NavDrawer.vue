@@ -9,6 +9,7 @@
                      :mini-variant="Mini"
                      :width="$vuetify.breakpoint.xsOnly ? 250 : 300"
                      mobile-break-point="1000">
+  <NavUserBlock />
   <v-divider></v-divider>
   <v-list dense>
     <template v-for="(r, i) in routeData">
@@ -31,11 +32,11 @@
         <v-list-tile v-for="(rc, j) in r.children"
                      :to="rc"
                      :key="j">
-          <!-- <v-list-tile-action>
+          <v-list-tile-action>
             <ImageFallbackIcon :size="20"
                                :route="rc"
                                :active="rc.name === route.name" />
-          </v-list-tile-action> -->
+          </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>
               {{rc.name | capitalize}}
@@ -67,10 +68,11 @@
 import { mapState, mapMutations } from 'vuex'
 import { routeData } from '@/router'
 import { ImageFallbackIcon } from '@/components/customIcon'
+import NavUserBlock from './NavUserBlock'
 
 export default {
   name: 'NavDrawer',
-  components: { ImageFallbackIcon },
+  components: { ImageFallbackIcon, NavUserBlock },
   props: {},
   data() {
     return {

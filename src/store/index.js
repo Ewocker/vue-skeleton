@@ -7,6 +7,7 @@ import Vuex from 'vuex'
 // import * as actions from '@/store/actions'
 //
 import app from '@/store/modules/app'
+import user from '@/store/modules/user'
 // import { Theme } from '@/style'
 // import general from '@/store/modules/app'
 
@@ -18,7 +19,7 @@ const store = new Vuex.Store({
   getters: {},
   mutations: {},
   actions: {},
-  modules: { app }
+  modules: { app, user }
 })
 
 export default store

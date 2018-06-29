@@ -6,6 +6,8 @@ import App from '@/App.vue'
 import registerPlugins from '@/plugins/'
 import router from '@/router'
 import store from '@/store'
+import VueWait from 'vue-wait'
+import { appConfig } from '@/config'
 
 const createVue = () => {
   registerPlugins()
@@ -14,6 +16,13 @@ const createVue = () => {
   new Vue({
     el: '#app',
     store,
+    // https://www.npmjs.com/package/vuex-loading
+    wait: new VueWait({
+      useVuex: true,
+      registerComponents: false,
+      registerDirective: false,
+      vuexModuleName: appConfig.vueWaitModuleName
+    }),
     router,
     render: h => h(App),
     created () {
@@ -22,8 +31,7 @@ const createVue = () => {
       } else {
         Vue.config.productionTip = false
       }
-      // this.$store.dispatch('user/setAsyncUserData')
-      // this.$store.dispatch('user/notification/setAsyncNotifications')
+      this.$store.dispatch('user/actGetUser')
     }
   })
 }

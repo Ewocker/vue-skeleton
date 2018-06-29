@@ -5,7 +5,7 @@
           text-xs-center
           display-3
           pt-1>
-    Settings
+    Template Page
   </v-flex>
 </v-layout>
 </template>
