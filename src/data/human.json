@@ -1,0 +1,37 @@
+[
+	{
+		"name": "Ewing",
+		"height": 174,
+		"weight": 71
+	},
+	{
+		"name": "Abby",
+		"height": 157,
+		"weight": 49
+	},
+	{
+		"name": "Josh",
+		"height": 181,
+		"weight": 91
+	},
+	{
+		"name": "Michael",
+		"height": 90,
+		"weight": 120
+	},
+	{
+		"name": "Nana",
+		"height": 163,
+		"weight": 59
+	},
+	{
+		"name": "Mena",
+		"height": 167,
+		"weight": 68
+	},
+	{
+		"name": "Harter",
+		"height": 170,
+		"weight": 69
+	}
+]
