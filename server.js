@@ -38,6 +38,7 @@ app.get('/sendMeNotification?', (req, res) => {
       .then(data => res.json(data))
       .catch(err => res.json(err))
   }
+  res.send('OK')
 })
 
 app.get('/getVapidPublicKey', (req, res) => {
