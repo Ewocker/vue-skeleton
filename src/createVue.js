@@ -6,7 +6,7 @@ import App from '@/App.vue'
 import registerPlugins from '@/plugins/'
 import router from '@/router'
 import store from '@/store'
-import VueWait from '@/plugins/vue-wait'
+import VueWait from 'vue-wait'
 import { appConfig } from '@/config'
 
 const createVue = () => {

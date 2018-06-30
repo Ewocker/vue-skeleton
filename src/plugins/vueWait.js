@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueWaitPackage from './vue-wait'
+import VueWaitPackage from 'vue-wait'
 
 const VueWait = () => {
   Vue.use(VueWaitPackage)
