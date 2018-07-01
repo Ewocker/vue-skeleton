@@ -12,7 +12,8 @@ const vuetify = () => {
       error: colors.red.accent3,
       info: '#2196F3',
       success: '#4CAF50',
-      warning: '#FFC107'
+      warning: '#FFC107',
+      other: '#f0c2c2'
     }
   })
 }

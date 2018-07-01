@@ -4,6 +4,7 @@ import toast from '@/plugins/toast'
 import vueRouterSync from '@/plugins/vueRouterSync'
 import vueWait from '@/plugins/vueWait'
 import '@/plugins/mdi' // Only Css
+import '@/plugins/customStyles'
 
 const registerPlugins = () => {
   vuetify()
