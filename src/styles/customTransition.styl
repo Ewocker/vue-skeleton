@@ -1,0 +1,33 @@
+// .slide-r2l-100
+// .slide-t2t-20
+// .slide-b2t-30
+
+$custom-transition = all 1s ease-out 0.1s
+$ranges = 1..10
+$directions = r l t b
+
+-tran($direction, $size)
+  if $direction == 'r'
+    translateX($size * 1px)
+  else if $direction == 'l'
+    translateX(-1 * $size * 1px)
+  else if $direction == 't'
+    translateY(-1 * $size * 1px)
+  else if $direction == 'b'
+    translateY($size * 1px)
+  else
+    translateX(100px)
+
+for $d1 in $directions
+  for $d2 in $directions
+    for $s in $ranges
+      $size = $s * 10
+      .slide-{$d1}2{$d2}-{$size}
+        &-enter-active, &-leave-active
+          transition: $custom-transition
+        &-enter
+          opacity: 0
+          transform: -tran($d1, $size)
+        &-leave-to
+          opacity: 0
+          transform: -tran($d2, $size)

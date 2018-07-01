@@ -74,7 +74,8 @@ const webpackConfig = merge(baseWebpackConfig, {
       chunksSortMode: 'dependency',
       // To exclude service-worker-entry
       serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname,
-        './service-worker-prod.js'))}</script>`
+        './service-worker-prod.js'))}</script>`,
+      title: config.app.title
     }),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({

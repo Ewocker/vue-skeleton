@@ -1,6 +1,6 @@
 {
-  "name": "new-webapp",
-  "short_name": "sproutlabs",
+  "name": "vue-skeleton",
+  "short_name": "vue-skeleton",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",
