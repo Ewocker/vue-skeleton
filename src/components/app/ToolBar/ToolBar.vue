@@ -4,7 +4,6 @@
            flat
            :height="barHeight"
            :scroll-off-screen="scrollOffScreen"
-           :scroll-threshold="scrollThreshold"
            dense
            color="primary"
            class="white--text border pa-0 ma-0">
@@ -25,8 +24,7 @@ export default {
   props: {},
   data() {
     return {
-      scrollOffScreen: false,
-      scrollThreshold: 100
+      scrollOffScreen: false
     }
   },
   mounted() {},

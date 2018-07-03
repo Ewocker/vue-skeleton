@@ -21,6 +21,8 @@
           pt-5 class="font-weight-thin">
     Dashboard
     <br>
+    <span class="title">Last Updated 7/3 2018</span>
+    <br>
     <v-btn color="primary"
            @click="mutMobileBottomNav">Toggle BottomNav</v-btn>
            <v-btn color="primary"
