@@ -44,10 +44,8 @@ export default {
   methods: {
     ...mapMutations('app', ['mutBottomNav']),
     mutMobileBottomNav() {
-      if (!this.$vuetify.breakpoint.xsOnly) {
-        this.$toasted.global.error({message: 'This is only for mobile view'})
-        this.mutBottomNav(!this.BottomNav)
-      }
+      if (!this.$vuetify.breakpoint.xsOnly) this.$toasted.global.error({message: 'This is only for mobile view'})
+      else this.mutBottomNav(!this.BottomNav)
     }
   },
   computed: {

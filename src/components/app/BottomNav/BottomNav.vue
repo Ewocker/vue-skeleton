@@ -2,6 +2,7 @@
 <!-- Adding app attribute will remove clip off -->
 <v-bottom-nav absolute
               shift
+              fixed
               v-if="$vuetify.breakpoint.xsOnly"
               :value="BottomNav"
               :active.sync="activeRouteName"
