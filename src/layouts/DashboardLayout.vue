@@ -1,12 +1,7 @@
 <template>
 <section v-if="isCorrectType">
   <NavDrawer />
-  <span v-if="$vuetify.breakpoint.smAndUp">
-    <ToolBar />
-  </span>
-  <span v-else>
-    <MobileToolBar />
-  </span>
+  <ToolBar />
   <v-content>
     <v-container fluid>
       <router-view/>
@@ -20,7 +15,6 @@
 import {
   NavDrawer,
   ToolBar,
-  MobileToolBar,
   Footer,
   BottomNav
 } from '@/components/app'
@@ -33,7 +27,6 @@ export default {
   components: {
     NavDrawer,
     ToolBar,
-    MobileToolBar,
     Footer,
     BottomNav
   },

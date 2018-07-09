@@ -1,17 +1,17 @@
 <template>
 <section>
-  <MobileToolBar v-if="$vuetify.breakpoint.xsOnly" />
-  <LaptopToolBar v-else />
+  <MobileSplashToolBar v-if="$vuetify.breakpoint.xsOnly" />
+  <LaptopSplashToolBar v-else />
 </section>
 </template>
 
 <script>
-import MobileToolBar from './MobileToolBar'
-import LaptopToolBar from './LaptopToolBar'
+import MobileSplashToolBar from './MobileSplashToolBar'
+import LaptopSplashToolBar from './LaptopSplashToolBar'
 
 export default {
   name: 'ToolBar',
-  components: { MobileToolBar, LaptopToolBar },
+  components: { MobileSplashToolBar, LaptopSplashToolBar },
   props: {},
   data() { return {} },
   mounted() {},

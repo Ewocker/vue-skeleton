@@ -1,12 +1,7 @@
 <template>
 <section v-if="isCorrectType">
-  <NavDrawer />
-  <!-- <span v-if="$vuetify.breakpoint.smAndUp">
-    <ToolBar />
-  </span>
-  <span v-else>
-    <MobileToolBar />
-  </span> -->
+  <SplashNavDrawer />
+  <SplashToolBar />
   <v-content>
     <v-container fluid>
       <router-view/>
@@ -18,9 +13,8 @@
 
 <script>
 import {
-  NavDrawer,
-  ToolBar,
-  MobileToolBar,
+  SplashNavDrawer,
+  SplashToolBar,
   Footer,
   BottomNav
 } from '@/components/app'
@@ -31,9 +25,8 @@ export default {
   name: 'SplashLayout',
   mixins: [layout(LayoutType.SPLASH)],
   components: {
-    NavDrawer,
-    ToolBar,
-    MobileToolBar,
+    SplashNavDrawer,
+    SplashToolBar,
     Footer,
     BottomNav
   },

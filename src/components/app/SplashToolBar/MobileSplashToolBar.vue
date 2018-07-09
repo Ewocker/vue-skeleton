@@ -16,7 +16,7 @@
     <v-flex xs6
             class="border text-xs-center pt-2">
       <v-toolbar-title>
-        Mobile {{ route.name | capitalizeAll }}
+        Splash {{ route.name | capitalizeAll }}
       </v-toolbar-title>
     </v-flex>
     <v-flex xs3
@@ -31,7 +31,7 @@ import { mapState } from 'vuex'
 import { MenuBtn } from '@/components/customBtn'
 
 export default {
-  name: 'MobileToolBar',
+  name: 'MobileSplashToolBar',
   components: { MenuBtn },
   props: {},
   data() {

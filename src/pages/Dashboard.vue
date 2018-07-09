@@ -21,7 +21,7 @@
           pt-5 class="font-weight-thin">
     Dashboard
     <br>
-    <span class="title">Last Updated 7/3 2018</span>
+    <span class="title">Last Updated {{dateString}}</span>
     <br>
     <v-btn color="primary"
            @click="mutMobileBottomNav">Toggle BottomNav</v-btn>
@@ -45,7 +45,9 @@ export default {
   data() {
     return {
       showBrowserSpec: false,
-      LayoutType: LayoutType
+      LayoutType: LayoutType,
+      /* eslint-disable no-undef */
+      dateString: webpack.dateString
     }
   },
   methods: {

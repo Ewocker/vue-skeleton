@@ -2,7 +2,8 @@ import ToolBar from './ToolBar'
 import NavDrawer from './NavDrawer'
 import Footer from './Footer'
 import BottomNav from './BottomNav'
-import MobileToolBar from './MobileToolBar'
+import SplashToolBar from './SplashToolBar'
+import SplashNavDrawer from './SplashNavDrawer'
 // import SideNavigator from './SideNavigator'
 
 export {
@@ -10,6 +11,7 @@ export {
   NavDrawer,
   Footer,
   BottomNav,
-  MobileToolBar
+  SplashToolBar,
+  SplashNavDrawer
   // SideNavigator,
 }
