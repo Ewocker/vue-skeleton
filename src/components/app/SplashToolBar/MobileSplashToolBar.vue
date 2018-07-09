@@ -9,11 +9,11 @@
            color="primary"
            class="white--text border pa-0 ma-0">
   <v-layout class="border">
-    <v-flex xs3
+    <!-- <v-flex xs3
             class="border">
       <MenuBtn />
-    </v-flex>
-    <v-flex xs6
+    </v-flex> -->
+    <v-flex xs9
             class="border text-xs-center pt-2">
       <v-toolbar-title>
         Splash {{ route.name | capitalizeAll }}

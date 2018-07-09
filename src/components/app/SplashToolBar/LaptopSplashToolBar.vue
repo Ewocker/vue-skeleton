@@ -8,7 +8,7 @@
            dense
            color="primary"
            class="white--text border pa-0 ma-0">
-  <MenuBtn />
+  <!-- <MenuBtn /> -->
   <v-toolbar-title>
     Splash  {{ route.name | capitalizeAll }}
   </v-toolbar-title>

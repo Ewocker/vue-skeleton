@@ -1,15 +1,16 @@
 <template>
 <v-navigation-drawer app
                      persistent
-                     left
+                     right
                      dark
                      fixed
                      v-model="drawer"
-                     :clipped="$vuetify.breakpoint.smAndUp"
                      :mini-variant="Mini"
                      :width="$vuetify.breakpoint.xsOnly ? 250 : 300"
-                     mobile-break-point="1000">
-  <!-- <NavUserBlock /> -->
+                     mobile-break-point="1000"
+                     class="blue lighten-3"
+                     dark>
+  <SplashNavUserBlock />
   <v-divider></v-divider>
   <v-list dense>
     <template v-for="(r, i) in routeData">

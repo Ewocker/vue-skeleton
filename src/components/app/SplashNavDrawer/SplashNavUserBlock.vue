@@ -1,6 +1,8 @@
 <template>
 <v-toolbar flat
-           height="60">
+           height="48"
+           class="blue darken-3"
+           dark>
   <v-list dense>
     <v-list-tile>
       <v-list-tile-avatar style="cursor: pointer">
@@ -27,7 +29,7 @@
       <v-list-tile-action v-if="$vuetify.breakpoint.smAndUp">
         <v-btn icon
                @click.stop="mutToggleMini">
-          <v-icon>chevron_left</v-icon>
+          <v-icon>chevron_right</v-icon>
         </v-btn>
       </v-list-tile-action>
     </v-list-tile>
