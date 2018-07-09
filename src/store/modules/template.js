@@ -18,7 +18,7 @@ const mutations = {
 
 for (let s of Object.keys(state)) {
   mutations[`mut${s}`] = (state, payload) => { state[s] = payload }
-  mutations[`mutToggle${s}`] = (state) => { state[s] = !state[s] }
+  if (typeof state[s] === 'boolean') mutations[`mutToggle${s}`] = (state) => { state[s] = !state[s] }
 }
 
 const actions = {

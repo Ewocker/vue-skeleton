@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueWaitPackage from 'vue-wait'
 
-const VueWait = () => {
+const register = () => {
   Vue.use(VueWaitPackage)
 }
 
-export default VueWait
+export default register

@@ -15,7 +15,6 @@ const proxyMiddleware = require('http-proxy-middleware')
 const webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
   : require('./webpack.dev.conf')
-
 // default port where dev server listens for incoming traffic
 const port = process.env.PORT || config.dev.port
 // automatically open browser, if not set will be false
@@ -35,13 +34,15 @@ const devMiddleware = require('webpack-dev-middleware')(compiler, {
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
   log: false
 })
-// force page reload when html-webpack-plugin template changes
-compiler.plugin('compilation', function (compilation) {
-  compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
-    hotMiddleware.publish({ action: 'reload' })
-    cb()
-  })
-})
+
+// This is a bug that cause hot reload not working
+// // force page reload when html-webpack-plugin template changes
+// compiler.plugin('compilation', function (compilation) {
+//   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
+//     hotMiddleware.publish({ action: 'reload' })
+//     cb()
+//   })
+// })
 
 // enable hot-reload and state-preserving
 // compilation error display

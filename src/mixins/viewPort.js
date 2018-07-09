@@ -1,7 +1,7 @@
 // import { mapGetters } from 'vuex'
 import { getViewport, watchViewPortResize } from '@/utils/browserUtils'
 
-export function factory (selected = []) {
+export function factory () {
   const data = () => {
     return {
       viewPortValue: { x: 1280, y: 800 } // By default arbitrary

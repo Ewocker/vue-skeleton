@@ -1,7 +1,7 @@
 // import { mapGetters } from 'vuex'
 import { watchOnLineUpdate } from '@/utils/networkUtils'
 
-export function factory (selected = []) {
+export function factory () {
   const computed = {
     onLine() { return watchOnLineUpdate() }
   }

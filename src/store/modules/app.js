@@ -1,9 +1,11 @@
 import { isOnLine } from '@/utils/networkUtils'
+import LayoutType from '@/layouts/LayoutType'
 
 const state = {
-  Mini: false,
+  Mini: true,
   NavDrawer: true,
   BottomNav: true,
+  CurrentLayoutType: LayoutType.DASHBOARD,
   OnLine: isOnLine
 }
 
@@ -15,7 +17,7 @@ const mutations = {
 
 for (let s of Object.keys(state)) {
   mutations[`mut${s}`] = (state, payload) => { state[s] = payload }
-  mutations[`mutToggle${s}`] = (state) => { state[s] = !state[s] }
+  if (typeof state[s] === 'boolean') mutations[`mutToggle${s}`] = (state) => { state[s] = !state[s] }
 }
 
 const actions = {}

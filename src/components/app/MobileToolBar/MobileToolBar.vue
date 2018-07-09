@@ -16,7 +16,7 @@
     <v-flex xs6
             class="border text-xs-center pt-2">
       <v-toolbar-title>
-        {{ route.name | capitalizeAll }}
+        Mobile {{ route.name | capitalizeAll }}
       </v-toolbar-title>
     </v-flex>
     <v-flex xs3
@@ -36,7 +36,7 @@ export default {
   props: {},
   data() {
     return {
-      scrollOffScreen: true,
+      scrollOffScreen: false,
       scrollThreshold: 100
     }
   },

@@ -25,8 +25,11 @@
     <br>
     <v-btn color="primary"
            @click="mutMobileBottomNav">Toggle BottomNav</v-btn>
-           <v-btn color="primary"
-                  @click="showBrowserSpec = !showBrowserSpec">Toggle Browser Spec</v-btn>
+    <v-btn color="primary"
+           @click="showBrowserSpec = !showBrowserSpec">Toggle Browser Spec</v-btn>
+    <v-btn color="primary"
+           @click="mutCurrentLayoutType(CurrentLayoutType == LayoutType.SPLASH ?
+             LayoutType.DASHBOARD : LayoutType.SPLASH )">Change Layout</v-btn>
   </v-flex>
 </v-layout>
 </template>
@@ -35,23 +38,25 @@
 import { mapState, mapMutations } from 'vuex'
 import { mobileCheck } from '@/utils/browserUtils'
 import { viewPort, network } from '@/mixins'
+import LayoutType from '@/layouts/LayoutType'
 
 export default {
   mixins: [viewPort, network],
   data() {
     return {
-      showBrowserSpec: false
+      showBrowserSpec: false,
+      LayoutType: LayoutType
     }
   },
   methods: {
-    ...mapMutations('app', ['mutBottomNav']),
+    ...mapMutations('app', ['mutBottomNav', 'mutCurrentLayoutType']),
     mutMobileBottomNav() {
       if (!this.$vuetify.breakpoint.xsOnly) this.$toasted.global.error({message: 'This is only for mobile view'})
       else this.mutBottomNav(!this.BottomNav)
     }
   },
   computed: {
-    ...mapState('app', ['BottomNav', 'OnLine']),
+    ...mapState('app', ['BottomNav', 'OnLine', 'CurrentLayoutType']),
     mobileCheck
   }
 }
