@@ -13,8 +13,8 @@
             class="border">
       <MenuBtn />
     </v-flex> -->
-    <v-flex xs9
-            class="border text-xs-center pt-2">
+    <v-flex xs6 offset-xs3
+            class="border text-xs-center">
       <v-toolbar-title>
         Splash {{ route.name | capitalizeAll }}
       </v-toolbar-title>
