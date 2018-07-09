@@ -3,7 +3,7 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import colors from 'vuetify/es5/util/colors'
 
-const vuetify = () => {
+const register = () => {
   Vue.use(Vuetify, {
     theme: {
       primary: colors.blue.lighten2,
@@ -18,4 +18,4 @@ const vuetify = () => {
   })
 }
 
-export default vuetify
+export default register

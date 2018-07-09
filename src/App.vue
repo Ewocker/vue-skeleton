@@ -1,41 +1,23 @@
 <template>
-<v-app toolbar>
-  <NavDrawer />
-  <span v-if="$vuetify.breakpoint.smAndUp">
-    <ToolBar />
-  </span>
-  <span v-else>
-    <MobileToolBar />
-  </span>
-  <v-content>
-    <v-container fluid>
-      <router-view/>
-    </v-container>
-  </v-content>
-  <BottomNav />
-  <!-- <Footer /> -->
+<v-app>
+  <DashboardLayout />
+  <SplashLayout />
 </v-app>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 import {
-  NavDrawer,
-  ToolBar,
-  MobileToolBar,
-  Footer,
-  BottomNav
-} from '@/components/app'
+  DashboardLayout,
+  SplashLayout
+} from '@/layouts'
 import { watchOnLineUpdate } from '@/utils/networkUtils'
 
 export default {
   name: 'App',
   components: {
-    NavDrawer,
-    ToolBar,
-    MobileToolBar,
-    Footer,
-    BottomNav
+    DashboardLayout,
+    SplashLayout
   },
   data() { return {} },
   created() {
@@ -44,6 +26,9 @@ export default {
   mounted() {},
   methods: {
     ...mapMutations('app', ['mutOnLine'])
+  },
+  computed: {
+    ...mapState('app', [])
   }
 }
 </script>
@@ -54,6 +39,7 @@ export default {
 // .border
 //   border: 1px dashed grey
 
+// Default font
 #app
   font-family: Quicksand, sans-serif
   -webkit-font-smoothing: antialiased

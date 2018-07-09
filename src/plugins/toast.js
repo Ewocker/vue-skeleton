@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Toasted from 'vue-toasted' // https://github.com/shakee93/vue-toasted
 import '@/styles/toast.sass'
 
-const toast = () => {
+const register = () => {
   // The basic ones with this.$toasted.show('Message')
   Vue.use(Toasted, {
     position: 'top-right',
@@ -37,4 +37,4 @@ const toast = () => {
   })
 }
 
-export default toast
+export default register

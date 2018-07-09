@@ -8,21 +8,11 @@
            dense
            color="primary"
            class="white--text border pa-0 ma-0">
-  <v-layout class="border">
-    <v-flex xs3
-            class="border">
-      <MenuBtn />
-    </v-flex>
-    <v-flex xs6
-            class="border text-xs-center pt-2">
-      <v-toolbar-title>
-        {{ route.name | capitalizeAll }}
-      </v-toolbar-title>
-    </v-flex>
-    <v-flex xs3
-            class="border">
-    </v-flex>
-  </v-layout>
+  <!-- <MenuBtn /> -->
+  <v-toolbar-title>
+    Splash  {{ route.name | capitalizeAll }}
+  </v-toolbar-title>
+  </v-flex>
 </v-toolbar>
 </template>
 
@@ -31,12 +21,12 @@ import { mapState } from 'vuex'
 import { MenuBtn } from '@/components/customBtn'
 
 export default {
-  name: 'MobileToolBar',
+  name: 'LaptopSplashToolBar',
   components: { MenuBtn },
   props: {},
   data() {
     return {
-      scrollOffScreen: true,
+      scrollOffScreen: false,
       scrollThreshold: 100
     }
   },
