@@ -1,7 +1,7 @@
 <template>
 <v-toolbar flat
-           height="48"
-           class="blue darken-3"
+           :height="BarHeight"
+           class="primary"
            dark>
   <v-list dense>
     <v-list-tile>
@@ -53,7 +53,7 @@ export default {
   beforeDestory() {},
   watch: {},
   computed: {
-    ...mapState('app', ['Mini']),
+    ...mapState('app', ['Mini', 'BarHeight']),
     ...mapState('user', ['User'])
   },
   methods: {

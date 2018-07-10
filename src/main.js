@@ -6,6 +6,7 @@ import Cookies from 'js-cookie'
 
 // Check if token exist here
 const token = Cookies.get('api_token')
+let vue
 if (!token) {
   if (process.env.NODE_ENV !== 'production') {
     Cookies.set('api_token', prompt(), {expires: 1 / (24)})
@@ -17,5 +18,7 @@ if (!token) {
     // window.location.href = '/login'
   }
 } else {
-  createVue()
+  vue = createVue()
 }
+
+export default vue

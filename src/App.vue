@@ -22,10 +22,13 @@ export default {
   data() { return {} },
   created() {
     watchOnLineUpdate(() => { this.mutOnLine(true) }, () => { this.mutOnLine(false) })
+
+    // For mobile view, default to not mini
+    this.mutMini(false)
   },
   mounted() {},
   methods: {
-    ...mapMutations('app', ['mutOnLine'])
+    ...mapMutations('app', ['mutOnLine', 'mutMini'])
   },
   computed: {
     ...mapState('app', [])

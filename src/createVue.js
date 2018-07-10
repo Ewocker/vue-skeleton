@@ -3,7 +3,7 @@
 
 import Vue from 'vue'
 import App from '@/App.vue'
-import registerPlugins from '@/plugins/'
+import registerPlugins from '@/plugins'
 import router from '@/router'
 import store from '@/store'
 import VueWait from 'vue-wait'
@@ -13,8 +13,9 @@ const createVue = () => {
   registerPlugins()
 
   /* eslint-disable no-new */
-  new Vue({
+  return new Vue({
     el: '#app',
+    router,
     store,
     // https://www.npmjs.com/package/vuex-loading
     wait: new VueWait({
@@ -23,7 +24,6 @@ const createVue = () => {
       registerDirective: false,
       vuexModuleName: appConfig.vueWaitModuleName
     }),
-    router,
     render: h => h(App),
     created () {
       if (process.env.NODE_ENV === 'development') {

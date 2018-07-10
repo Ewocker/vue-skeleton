@@ -1,7 +1,6 @@
 <template>
 <!-- Adding app attribute will remove clip off -->
-<v-bottom-nav absolute
-              shift
+<v-bottom-nav shift
               fixed
               v-if="$vuetify.breakpoint.xsOnly"
               :value="BottomNav"

@@ -10,7 +10,7 @@ const dateString = m.getFullYear() + "/" +
     ("0" + m.getHours()).slice(-2) + ":" +
     ("0" + m.getMinutes()).slice(-2) + ":" +
     ("0" + m.getSeconds()).slice(-2);
-console.log(dateString);
+console.log("> " + dateString);
 
 module.exports = {
   app: { // custom application value for index.html such as title

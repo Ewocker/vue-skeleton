@@ -1,6 +1,6 @@
 <template>
 <v-btn icon
-       @click="mutNavDrawer(!NavDrawer)"
+       @click="mutToggleNavDrawer"
        class="border">
   <AnimatedIcon :state="state"
                 :color="color"
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { mapMutations } from 'vuex'
 import { AnimatedIcon } from '@/components/customIcon'
 
 export default {
@@ -23,13 +23,12 @@ export default {
   },
   mounted() {},
   computed: {
-    ...mapState('app', ['NavDrawer']),
     state() { return this.NavDrawer ? 'arrow-left' : 'hamburger' },
     stroke() { return this.NavDrawer ? 4 : 2 },
     color() { return 'white' }
   },
   methods: {
-    ...mapMutations('app', ['mutNavDrawer'])
+    ...mapMutations('app', ['mutToggleNavDrawer'])
   }
 }
 </script>
