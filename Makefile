@@ -1,21 +1,30 @@
-VERSION ?= 0.0.1
-IMAGE_VERSION ?= 1
-
 REPO = vue-skeleton
 NS = ewocker
 PORT = 4000
 
-IMAGE_NAME=$(NS)/$(REPO):$(VERSION)-$(IMAGE_VERSION)
+VERSION := $(shell node -p 'require("./package.json").version')
 
-.PHONY: build push run default
+.PHONY: build major minor patch push run default
 
 build:
 	docker build --no-cache \
 		--build-arg VCS_REF=`git rev-parse --short HEAD` \
 	 	--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
 		--build-arg PKG_VER=$(VERSION) \
-		--build-arg PORT=${PORT} \
-		-t $(IMAGE_NAME) .
+		--build-arg PORT=$(PORT) \
+		-t $(NS)/$(REPO):$(VERSION) .
+
+major:
+	npm version major
+	make build
+
+minor:
+	npm version minor
+	make build
+
+patch:
+	npm version patch
+	make build
 
 push:
 	docker push $(IMAGE_NAME)
