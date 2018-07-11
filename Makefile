@@ -27,9 +27,9 @@ patch:
 	make build
 
 push:
-	docker push $(IMAGE_NAME)
+	docker push $(NS)/$(REPO):$(VERSION)
 
 run:
-	docker run --rm -it -p $(PORT):$(PORT) $(IMAGE_NAME)
+	docker run --rm -it -p $(PORT):$(PORT) $(NS)/$(REPO):$(VERSION)
 
 default: build
