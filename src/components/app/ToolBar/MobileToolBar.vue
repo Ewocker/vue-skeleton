@@ -2,7 +2,7 @@
 <v-toolbar app
            fixed
            flat
-           :height="barHeight"
+           :height="BarHeight"
            :scroll-off-screen="scrollOffScreen"
            :scroll-threshold="scrollThreshold"
            dense
@@ -42,7 +42,8 @@ export default {
   },
   mounted() {},
   computed: {
-    ...mapState(['barHeight', 'route'])
+    ...mapState(['route']),
+    ...mapState('app', ['BarHeight'])
   },
   methods: {}
 }

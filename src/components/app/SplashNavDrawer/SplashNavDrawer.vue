@@ -1,11 +1,12 @@
 <template>
 <v-navigation-drawer app
-                     persistent
+                     :persistent="$vuetify.breakpoint.xsOnly ? false : true"
+                     :permanent="!$vuetify.breakpoint.xsOnly ? true : false"
                      right
                      dark
                      fixed
                      v-model="drawer"
-                     :mini-variant="Mini"
+                     :mini-variant="$vuetify.breakpoint.xsOnly ? false : Mini"
                      :width="$vuetify.breakpoint.xsOnly ? 250 : 300"
                      mobile-break-point="1000"
                      class="blue lighten-3"

@@ -20,10 +20,14 @@ import {
 } from '@/components/app'
 import { layout } from '@/mixins'
 import LayoutType from './LayoutType'
+import { mapMutations } from 'vuex'
+import { useDefaultTheme } from '@/utils/themeUtils'
+
+const LAYOUT = LayoutType.DASHBOARD
 
 export default {
   name: 'DashboardLayout',
-  mixins: [layout(LayoutType.DASHBOARD)],
+  mixins: [layout(LAYOUT)],
   components: {
     NavDrawer,
     ToolBar,
@@ -32,6 +36,19 @@ export default {
   },
   data() {
     return {}
+  },
+  mounted() { this.layoutSetupIfSelect() },
+  methods: {
+    ...mapMutations('app', ['mutBarHeight']),
+    layoutSetupIfSelect() {
+      if (this.CurrentLayoutType === LAYOUT) {
+        this.mutBarHeight(45)
+        useDefaultTheme(this)
+      }
+    }
+  },
+  watch: {
+    CurrentLayoutType(val) { this.layoutSetupIfSelect() }
   }
 }
 </script>

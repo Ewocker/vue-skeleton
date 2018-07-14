@@ -1,17 +1,20 @@
 import { isOnLine } from '@/utils/networkUtils'
 import LayoutType from '@/layouts/LayoutType'
+import { routeData } from '@/router'
 
-const state = {
+export const state = {
   Mini: true,
   NavDrawer: true,
   BottomNav: true,
+  BarHeight: 60,
   CurrentLayoutType: LayoutType.DASHBOARD,
-  OnLine: isOnLine
+  OnLine: isOnLine,
+  RouteData: routeData
 }
 
-const getters = {}
+export const getters = {}
 
-const mutations = {
+export const mutations = {
   // Only add custom mut here, basic mut is done.
 }
 
@@ -20,7 +23,7 @@ for (let s of Object.keys(state)) {
   if (typeof state[s] === 'boolean') mutations[`mutToggle${s}`] = (state) => { state[s] = !state[s] }
 }
 
-const actions = {}
+export const actions = {}
 
 export default {
   namespaced: true,

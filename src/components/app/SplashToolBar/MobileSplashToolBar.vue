@@ -2,25 +2,22 @@
 <v-toolbar app
            fixed
            flat
-           :height="barHeight"
+           :height="BarHeight"
            :scroll-off-screen="scrollOffScreen"
            :scroll-threshold="scrollThreshold"
            dense
-           color="primary"
+           color="main"
            class="white--text border pa-0 ma-0">
   <v-layout class="border">
-    <!-- <v-flex xs3
-            class="border">
-      <MenuBtn />
-    </v-flex> -->
-    <v-flex xs9
+    <v-flex xs6 offset-xs3
             class="border text-xs-center pt-2">
       <v-toolbar-title>
         Splash {{ route.name | capitalizeAll }}
       </v-toolbar-title>
     </v-flex>
     <v-flex xs3
-            class="border">
+            class="border text-xs-right">
+      <MenuBtn />
     </v-flex>
   </v-layout>
 </v-toolbar>
@@ -42,7 +39,8 @@ export default {
   },
   mounted() {},
   computed: {
-    ...mapState(['barHeight', 'route'])
+    ...mapState(['route']),
+    ...mapState('app', ['BarHeight'])
   },
   methods: {}
 }

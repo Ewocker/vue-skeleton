@@ -1,5 +1,4 @@
 // This is a custom layout mixin
-
 import { mapState } from 'vuex'
 
 export function factory(selectedLayoutType) {

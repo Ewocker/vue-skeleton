@@ -2,11 +2,11 @@
 <v-toolbar app
            fixed
            flat
-           :height="barHeight"
+           :height="BarHeight"
            :scroll-off-screen="scrollOffScreen"
            :scroll-threshold="scrollThreshold"
            dense
-           color="primary"
+           color="main"
            class="white--text border pa-0 ma-0">
   <!-- <MenuBtn /> -->
   <v-toolbar-title>
@@ -32,7 +32,8 @@ export default {
   },
   mounted() {},
   computed: {
-    ...mapState(['barHeight', 'route'])
+    ...mapState(['route']),
+    ...mapState('app', ['BarHeight'])
   },
   methods: {}
 }
