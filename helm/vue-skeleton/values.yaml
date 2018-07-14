@@ -6,7 +6,7 @@ replicaCount: 2
 
 image:
   repository: ewocker
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   containerPort: 4000
 
 service:

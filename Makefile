@@ -1,6 +1,6 @@
 REPO = vue-skeleton
 NS = ewocker
-PORT = 4000
+PORT = 3000
 
 VERSION := $(shell node -p 'require("./package.json").version')
 
