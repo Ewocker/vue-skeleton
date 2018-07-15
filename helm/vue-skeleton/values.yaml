@@ -1,4 +1,4 @@
-# Default values for vue-skeleton.
+# Default values for ewing-portfolio.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -14,4 +14,4 @@ service:
   port: 80
 
 app:
-  name: vue-skeleton
+  name: ewing-portfolio

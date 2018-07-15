@@ -36,6 +36,6 @@ LABEL maintainer="chockerlin@gmail.com" \
       app.version="${VERSION}" \
       app.build-date="${BUILD_DATE}" \
       app.vendor="Ewocker" \
-      app.name="vue-skeleton" \
+      app.name="ewing-portfolio" \
       app.description="A Vue.js skeleton app" \
       app.docker.dockerfile="/Dockerfile" \

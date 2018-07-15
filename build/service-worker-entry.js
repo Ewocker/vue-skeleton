@@ -14,7 +14,7 @@ self.addEventListener('push', function(event) {
       })
     )
   } catch (err) {
-    console.log('Notication does not follow vue-skeleton standard.')
+    console.log('Notication does not follow standard.')
   }
 })
 

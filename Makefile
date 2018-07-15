@@ -1,4 +1,4 @@
-REPO = vue-skeleton
+REPO = ewing-portfolio
 NS = ewocker
 PORT = 3000
 

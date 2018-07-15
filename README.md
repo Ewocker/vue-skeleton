@@ -1,8 +1,8 @@
-# Vue-Skeleton
+# ewing-portfolio
 
 > A basic [Vue.js](https://vuejs.org/) skeleton frontend application using [Vuetify.js](https://vuetifyjs.com/) with simple server with express. Build on top of [vue-pwa-boilerplate](https://github.com/vuejs-templates/pwa).
 
-Vue-Skeleton [Demo](https://vue-skeleton.herokuapp.com/).
+ewing-portfolio [Demo](https://ewing-portfolio.herokuapp.com/).
 
 ---
 
