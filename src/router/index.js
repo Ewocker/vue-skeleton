@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Store from '@/store'
 import {
-  Dashboard,
+  Home,
   TemplatePage
 } from '@/pages'
 
@@ -21,7 +21,7 @@ export const routeData = [{
   // ===== For router =====
   name: 'home',
   path: '/',
-  component: Dashboard
+  component: Home
 }, {
   meta: {
     icon: 'dashboard',

@@ -12,11 +12,11 @@
   <!-- <v-toolbar-title> -->
     <v-layout row wrap>
       <v-flex xs2 class="border">
-        <img src="@/assets/logo-music.png"
+        <!-- <img src="@/assets/logo-music.png"
              alt="Ewing's Logo"
              width="10"
              class="logo"
-             @click="$router.push('/')">
+             @click="$router.push('/')"> -->
       </v-flex>
       <v-flex xs10 class="border text-xs-right font-30"
                    :style="`padding-right: ${BarHeight + 15}px`">
@@ -60,7 +60,7 @@ export default {
   cursor: pointer
   opacity: 0.9
   &:hover
-    transform: scale(12) translate(2.8px, 2.2px)
+    transform: scale(16) translate(3.5px, 3px)
     opacity: 0.7
 
 </style>

@@ -1,7 +1,7 @@
-import Dashboard from './Dashboard'
+import Home from './Home'
 import TemplatePage from './TemplatePage'
 
 export {
-  Dashboard,
+  Home,
   TemplatePage
 }

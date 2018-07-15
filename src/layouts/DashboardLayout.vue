@@ -4,7 +4,7 @@
   <ToolBar />
   <v-content>
     <v-container fluid>
-      <router-view/>
+      <router-view />
     </v-container>
   </v-content>
   <BottomNav />
@@ -54,4 +54,6 @@ export default {
 </script>
 
 <style lang="sass">
+// .border
+//   border: 1px dashed black
 </style>
