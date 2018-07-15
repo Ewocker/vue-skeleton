@@ -7,7 +7,7 @@ export const state = {
   NavDrawer: true,
   BottomNav: true,
   BarHeight: 60,
-  CurrentLayoutType: LayoutType.DASHBOARD,
+  CurrentLayoutType: LayoutType.SPLASH,
   OnLine: isOnLine,
   RouteData: routeData
 }

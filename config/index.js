@@ -2,7 +2,7 @@
 
 // see http://vuejs-templates.github.io/webpack for documentation.
 const path = require('path')
-const packageJson = require('../package.json')
+// const packageJson = require('../package.json')
 const m = new Date();
 const dateString = m.getFullYear() + "/" +
     ("0" + (m.getMonth()+1)).slice(-2) + "/" +
@@ -14,7 +14,7 @@ console.log("> " + dateString);
 
 module.exports = {
   app: { // custom application value for index.html such as title
-    title: packageJson.name,
+    title: "Ewing's Portfolio",
     dateString: dateString
   },
   build: {

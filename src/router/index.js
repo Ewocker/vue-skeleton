@@ -10,7 +10,7 @@ Vue.use(Router)
 
 export const routeData = [{
   meta: {
-    icon: 'apps', // If icon is not empty, use icon instead of image
+    icon: 'face', // If icon is not empty, use icon instead of image
     image: '',
     imageActive: '',
     showOnBottomNav: true, // Shold show as a option on bottom navigation
@@ -19,23 +19,23 @@ export const routeData = [{
   // If icon is empty, use image
   // image should have two version, one for active
   // ===== For router =====
-  name: 'dashboard',
+  name: 'home',
   path: '/',
   component: Dashboard
 }, {
   meta: {
-    icon: 'settings',
+    icon: 'dashboard',
     image: '',
     imageActive: '',
     showOnBottomNav: false,
     showBottomNav: true
   },
-  name: 'List Route',
-  path: '/list_route',
+  name: 'works',
+  path: '/works',
   component: TemplatePage,
   children: [ {
     meta: {
-      icon: 'settings',
+      icon: 'looks_one',
       image: '',
       imageActive: '',
       showOnBottomNav: false,
@@ -46,7 +46,7 @@ export const routeData = [{
     component: TemplatePage
   }, {
     meta: {
-      icon: 'settings',
+      icon: 'looks_two',
       image: '',
       imageActive: '',
       showOnBottomNav: false,

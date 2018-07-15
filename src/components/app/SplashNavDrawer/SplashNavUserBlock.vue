@@ -8,22 +8,11 @@
       <v-list-tile-avatar style="cursor: pointer">
         <v-icon large
                 @click="() => { $vuetify.breakpoint.smAndUp ? mutToggleMini() : '' }"
-                class="white--text">account_circle</v-icon>
+                class="white--text iconLargeHover">{{ route.meta.icon }}</v-icon>
       </v-list-tile-avatar>
       <v-list-tile-content>
-        <v-list-tile-title>
-          <span v-if="$wait.is(['actGetUser'])">
-            <v-progress-circular indeterminate
-                                 :width="1"
-                                 :size="16"
-                                 color="primary"></v-progress-circular>
-          </span>
-          <span v-else-if="!User">
-            No User is Logged In
-          </span>
-          <span v-else>
-            {{`${User.firstname} ${User.lastname}` | capitalizeAll }}
-          </span>
+        <v-list-tile-title class="font-20 text-xs-center">
+          {{ route.name | capitalize }}
         </v-list-tile-title>
       </v-list-tile-content>
       <v-list-tile-action v-if="$vuetify.breakpoint.smAndUp">
@@ -53,8 +42,8 @@ export default {
   beforeDestory() {},
   watch: {},
   computed: {
-    ...mapState('app', ['Mini', 'BarHeight']),
-    ...mapState('user', ['User'])
+    ...mapState(['route']),
+    ...mapState('app', ['Mini', 'BarHeight'])
   },
   methods: {
     ...mapMutations('app', ['mutToggleMini'])
@@ -66,4 +55,8 @@ export default {
 <style lang="sass" scoped>
 // .border
 //     border: 1px dashed grey
+.iconLargeHover
+  transform: scale(1.2)
+  &:hover
+    transform: scale(1.6)
 </style>

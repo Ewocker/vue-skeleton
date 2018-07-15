@@ -16,15 +16,18 @@
   <v-list dense>
     <template v-for="(r, i) in routeData">
       <v-list-group v-if="r.children"
-                    :key="i"
-                    no-action>
+                    :key="i">
         <v-list-tile slot="activator"
                      :to="r">
-          <v-list-tile-action>
-            <ImageFallbackIcon :size="20"
-                               :route="r"
-                               :active="r.name === route.name" />
-          </v-list-tile-action>
+          <v-tooltip color="primary" left>
+            <v-list-tile-action slot="activator">
+              <ImageFallbackIcon class="iconLargeHover"
+                                 :size="20"
+                                 :route="r"
+                                 :active="r.name === route.name" />
+            </v-list-tile-action>
+            <span>{{ r.name | capitalize }}</span>
+          </v-tooltip>
           <v-list-tile-content>
             <v-list-tile-title>
               {{r.name | capitalize}}
@@ -34,11 +37,15 @@
         <v-list-tile v-for="(rc, j) in r.children"
                      :to="rc"
                      :key="j">
-          <v-list-tile-action>
-            <ImageFallbackIcon :size="20"
-                               :route="rc"
-                               :active="rc.name === route.name" />
-          </v-list-tile-action>
+          <v-tooltip color="primary" left>
+            <v-list-tile-action slot="activator">
+              <ImageFallbackIcon class="iconLargeHover"
+                                 :size="20"
+                                 :route="rc"
+                                 :active="rc.name === route.name" />
+            </v-list-tile-action>
+            <span>{{ rc.name | capitalize }}</span>
+          </v-tooltip>
           <v-list-tile-content>
             <v-list-tile-title>
               {{rc.name | capitalize}}
@@ -50,11 +57,15 @@
                    :to="r"
                    :key="i"
                    exact>
-        <v-list-tile-action>
-          <ImageFallbackIcon :size="20"
-                             :route="r"
-                             :active="r.name === route.name" />
-        </v-list-tile-action>
+        <v-tooltip color="primary" left>
+          <v-list-tile-action slot="activator">
+            <ImageFallbackIcon class="iconLargeHover"
+                               :size="20"
+                               :route="r"
+                               :active="r.name === route.name" />
+          </v-list-tile-action>
+          <span>{{ r.name | capitalize }}</span>
+        </v-tooltip>
         <v-list-tile-content>
           <v-list-tile-title>
             {{r.name | capitalize}}
@@ -104,4 +115,9 @@ export default {
 <style lang="sass" scoped>
 // .border
 //     border: 1px dashed grey
+.iconLargeHover
+  transition: all 0.2s
+  transform: scale(1.1)
+  &:hover
+    transform: scale(1.3)
 </style>
